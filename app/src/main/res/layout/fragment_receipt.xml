@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/receipt_photo"
+             android:layout_width="80dp"
+             android:layout_height="80dp"
+             android:scaleType="centerInside"
+             android:cropToPadding="true"
+             android:background="@android:color/darker_gray"/>
+         <ImageButton
+             android:id="@+id/receipt_camera"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:src="@android:drawable/ic_menu_camera"/>
+
+        </LinearLayout>
+
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/receipt_title_label" />
+
+        <EditText
+            android:id="@+id/receipt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/receipt_title_hint"/>
+        
+    </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_details_label"/>
+    <EditText
+        android:id="@+id/receipt_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/shop_name"/>
+    <EditText
+        android:id="@+id/receipt_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/receipt_comments"/>
+    <Button
+        android:id="@+id/receipt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/receipt_suspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_suspect_text"/>
+    <Button
+        android:id="@+id/receipt_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_report_text"/>
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_receipt"/>
+
+
+
+</LinearLayout>

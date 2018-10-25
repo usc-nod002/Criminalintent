@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bignerdranch.android.MyReceipts">
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCEPT_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCEPT_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MyReceipts"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.bignerdranch.android.MyReceipts.ReceiptPagerActivity"
+            android:parentActivityName="com.bignerdranch.android.MyReceipts.ReceiptListActivity">
+        </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bignerdranch.android.MyReceipts.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files"/>
+        </provider>
+        <activity android:name="com.bignerdranch.android.MyReceipts.ReceiptListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HelpWebPage"
+            android:parentActivityName=".ReceiptListActivity">
+
+        </activity>
+
+    </application>
+
+</manifest>
